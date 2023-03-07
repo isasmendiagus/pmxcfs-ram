@@ -54,7 +54,7 @@ VARLIBDIR_PERSISTENT_PATH="/var/lib/pve-cluster-persistent"
 # PERSISTENCY TIMEOUT IN SECONDS
 # After this amount of time (specified in seconds), the data stored in RAM will be written to disk.
 # If you want to persist the PVE config only at shutdown time, set this option to 0
-PERSISTENCY_TIMEOUT=20
+PERSISTENCY_TIMEOUT=3600
 #
 ###################################################################################################################
 
