@@ -1,0 +1,19 @@
+# Description:
+# The pmxcfs-ram.service is designed to ensure that the pmxcfs process works
+# with the config.db file in memory, which helps reduce disk load.
+#
+
+[Unit]
+Description=The RAM storage for pmxcfs
+Before=pve-cluster.service
+RefuseManualStart=true
+RefuseManualStop=true
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/pmxcfs-ram.sh
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
+
